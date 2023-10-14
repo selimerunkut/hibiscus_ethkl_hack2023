@@ -19,9 +19,9 @@ import {
   useUserSigner,
   useCurrentDistribution,
 } from "./hooks";
-import QuadraticDiplomacyVote from "./views/QuadraticDiplomacyVote";
-import QuadraticDiplomacyReward from "./views/QuadraticDiplomacyReward";
-import QuadraticDiplomacyCreate from "./views/QuadraticDiplomacyCreate";
+import QuadraticVoting from "./views/QuadraticVoting";
+import QuadraticVotingBudgetAllocation from "./views/QuadraticVotingBudgetAllocation";
+import QuadraticVotingCreate from "./views/QuadraticVotingCreate";
 
 const { ethers } = require("ethers");
 const { Title } = Typography;
@@ -433,7 +433,7 @@ function App() {
 
         <Switch>
           <Route exact path="/">
-            <QuadraticDiplomacyCreate
+            <QuadraticVotingCreate
               mainnetProvider={mainnetProvider}
               serverUrl={serverUrl}
               address={address}
@@ -444,7 +444,7 @@ function App() {
             />
           </Route>
           <Route path="/quadratic-diplomacy-vote">
-            <QuadraticDiplomacyVote
+            <QuadraticVoting
               isVoter={isVoter}
               mainnetProvider={mainnetProvider}
               currentDistribution={currentDistribution}
@@ -454,7 +454,7 @@ function App() {
             />
           </Route>
           <Route path="/quadratic-diplomacy-reward">
-            <QuadraticDiplomacyReward
+            <QuadraticVotingBudgetAllocation
               tx={tx}
               writeContracts={writeContracts}
               userSigner={userSigner}
@@ -483,7 +483,7 @@ function App() {
   function pageContentForVoter() {
     return (
       <div>
-        <QuadraticDiplomacyVote
+        <QuadraticVoting
           isVoter={isVoter}
           mainnetProvider={mainnetProvider}
           currentDistribution={currentDistribution}

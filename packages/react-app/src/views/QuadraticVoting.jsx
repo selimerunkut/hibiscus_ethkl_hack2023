@@ -5,7 +5,7 @@ import { Address } from "../components";
 const { Title, Text } = Typography;
 const axios = require("axios");
 
-export default function QuadraticDiplomacyVote({
+export default function QuadraticVoting({
   contributorEntries,
   isVoter,
   mainnetProvider,
@@ -205,7 +205,7 @@ export default function QuadraticDiplomacyVote({
         currentStep === 2 && (
           <>
             <Title level={3} style={{ fontFamily: "Space Mono" }}>Thank you for voting.</Title>
-            <p>The allocation to this workstream will be informed by your votes.</p>
+           
             <Title level={5} style={{ marginTop: "24px" }}>Your votes:</Title>
             {Object.entries(selectedContributors).map(([contributorAddress, voteTokens]) => (
               <div key={contributorAddress}>

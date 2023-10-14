@@ -14,7 +14,7 @@ const REWARD_STATUS = {
 };
 const VOTING_TYPES = ["Quadratic", "Common"];
 
-export default function QuadraticDiplomacyReward({
+export default function QuadraticVotingBudgetAllocation({
   tx,
   writeContracts,
   userSigner,
@@ -333,7 +333,7 @@ export default function QuadraticDiplomacyReward({
 
   return (
     <div style={{ border: "1px solid #cccccc", padding: 16, width: 1000, margin: "auto", marginTop: 64 }}>
-      <Title level={3}>Reward Contributors {currentDistribution.id}</Title>
+      <Title level={3}>Voting Categories {currentDistribution.id}</Title>
       <Title level={5}>
         Total votes:&nbsp;&nbsp;
         <Tag color="#000000">{totalVotes}</Tag>
@@ -381,7 +381,7 @@ export default function QuadraticDiplomacyReward({
           pagination={{ pageSize: 100, hideOnSinglePage: true }}
         />
         <Divider />
-        <Title level={4}>Candidates</Title>
+        <Title level={4}>Voting Categories</Title>
         <Table
           bordered
           dataSource={dataSource}
