@@ -123,9 +123,9 @@ export default function QuadraticDiplomacyCreate({
           />
         </Form.Item>
         <Divider />
-        <Button type="primary" block onClick={() => handleAddVoters()}>
+{/*         <Button type="primary" block onClick={() => handleAddVoters()}>
           Add Voters from Clipboard
-        </Button>
+        </Button> */}
         <Divider />
         {voters.map((_, index) => (
           <VoterInput
@@ -148,12 +148,12 @@ export default function QuadraticDiplomacyCreate({
           </Button>
         </Form.Item>
         <Divider />
-        <Button type="primary" block onClick={() => handleAddCandidates()}>
+{/*         <Button type="primary" block onClick={() => handleAddCandidates()}>
           Add Candidates from Clipboard
-        </Button>
+        </Button> */}
         <Divider />
         {candidates.map((_, index) => (
-          <VoterInput
+          <CandidateInput
             key={index}
             index={index}
             setVoters={setCandidates}
@@ -191,6 +191,43 @@ const VoterInput = ({ index, voters, setVoters, mainnetProvider }) => {
   return (
     <>
       <Form.Item label={`Voter ${index + 1}`} name={`address[${index}]`} style={{ marginBottom: "16px" }}>
+        <Row gutter={8} align="middle">
+          <Col span={16}>
+            <AddressInput
+              autoFocus
+              ensProvider={mainnetProvider}
+              placeholder="Enter address"
+              value={voters[index]}
+              onChange={address => {
+                setVoters(prevVoters => {
+                  const nextVoters = [...prevVoters];
+                  nextVoters[index] = address;
+                  return nextVoters;
+                });
+              }}
+            />
+          </Col>
+          <Col span={8}>
+            <DeleteOutlined
+              style={{ cursor: "pointer", color: "#ff6666" }}
+              onClick={event => {
+                setVoters(prevVoters => {
+                  const nextVoters = [...prevVoters];
+                  return nextVoters.filter((_, i) => i !== index);
+                });
+              }}
+            />
+          </Col>
+        </Row>
+      </Form.Item>
+    </>
+  );
+};
+
+const CandidateInput = ({ index, voters, setVoters, mainnetProvider }) => {
+  return (
+    <>
+      <Form.Item label={`Candidate ${index + 1}`} name={`address[${index}]`} style={{ marginBottom: "16px" }}>
         <Row gutter={8} align="middle">
           <Col span={16}>
             <AddressInput

@@ -1,8 +1,8 @@
 # Quadratic diplomacy (distribution creation and votes off-chain, voters and candidates split list)
 
-A semi-decentralized & effective way of distributing rewards to workstream contributors.
+A semi-decentralized voting system for educational intitutions
 
-http://feast.buidlguidl.surge.sh/
+Schools, Universities, etc.
 
 With one list for the voters and another list for the candidates.
 
