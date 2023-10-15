@@ -268,10 +268,10 @@ export default function QuadraticVotingBudgetAllocation({
       func = payFromSelf
         ? // payable functions need an `overrides` param.
           // relevant docs: https://docs.ethers.io/v5/api/contract/contract/#Contract-functionsCall
-          writeContracts.QuadraticDiplomacyContract.sharePayedETH(wallets, amounts, {
+          writeContracts.QuadraticVotingContract.sharePayedETH(wallets, amounts, {
             value: ethers.utils.parseEther(totalRewardAmount.toString()),
           })
-        : writeContracts.QuadraticDiplomacyContract.shareETH(wallets, amounts);
+        : writeContracts.QuadraticVotingContract.shareETH(wallets, amounts);
     } else {
       const tokenAddress = writeContracts[selectedToken].address;
       const userAddress = await userSigner.getAddress();
@@ -280,7 +280,7 @@ export default function QuadraticVotingBudgetAllocation({
       if (payFromSelf) {
         await tx(
           tokenContract.approve(
-            writeContracts.QuadraticDiplomacyContract.address,
+            writeContracts.QuadraticVotingContract.address,
             ethers.utils.parseUnits(totalRewardAmount.toString(), 18),
           ),
         );
@@ -292,8 +292,8 @@ export default function QuadraticVotingBudgetAllocation({
         amounts.push(ethers.utils.parseUnits((Math.floor(rewardAmount * 10000) / 10000).toString()));
       });
       func = payFromSelf
-        ? writeContracts.QuadraticDiplomacyContract.sharePayedToken(wallets, amounts, tokenAddress, userAddress)
-        : writeContracts.QuadraticDiplomacyContract.shareToken(wallets, amounts, tokenAddress);
+        ? writeContracts.QuadraticVotingContract.sharePayedToken(wallets, amounts, tokenAddress, userAddress)
+        : writeContracts.QuadraticVotingContract.shareToken(wallets, amounts, tokenAddress);
     }
 
     await tx(func, update => {

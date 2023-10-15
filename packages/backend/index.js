@@ -49,7 +49,7 @@ const isAdmin = async (address) => {
 
   contractList = require("../react-app/src/contracts/hardhat_contracts.json");
 
-  const contractData = contractList[_chainId][targetNetwork.name].contracts.QuadraticDiplomacyContract;
+  const contractData = contractList[_chainId][targetNetwork.name].contracts.QuadraticVotingContract;
   const contract = new ethers.Contract(contractData.address, contractData.abi, localProvider);
 
   const adminRole = await contract.DEFAULT_ADMIN_ROLE();

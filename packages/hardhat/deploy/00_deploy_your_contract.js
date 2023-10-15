@@ -8,7 +8,7 @@ module.exports = async ({ getNamedAccounts, deployments }) => {
   const { deploy } = deployments;
   const { deployer } = await getNamedAccounts();
 
-  await deploy("QuadraticDiplomacyContract", {
+  await deploy("QuadraticVotingContract", {
     from: deployer,
     log: true,
     args: [TO_ADDRESS],
@@ -16,8 +16,8 @@ module.exports = async ({ getNamedAccounts, deployments }) => {
 
   /*
     // Test data
-    const QuadraticDiplomacyContract = await ethers.getContract(
-      "QuadraticDiplomacyContract",
+    const QuadraticVotingContract = await ethers.getContract(
+      "QuadraticVotingContract",
       deployer
     );
 
@@ -29,13 +29,13 @@ module.exports = async ({ getNamedAccounts, deployments }) => {
     ];
     const amounts = [90, 9, 1];
 
-    await QuadraticDiplomacyContract.addMember(names[0], wallets[0]);
-    await QuadraticDiplomacyContract.addMember(names[1], wallets[1]);
-    await QuadraticDiplomacyContract.addMember(names[2], wallets[2]);
+    await QuadraticVotingContract.addMember(names[0], wallets[0]);
+    await QuadraticVotingContract.addMember(names[1], wallets[1]);
+    await QuadraticVotingContract.addMember(names[2], wallets[2]);
 
-    await QuadraticDiplomacyContract.giveVotes(TO_ADDRESS, 100);
-    await QuadraticDiplomacyContract.giveVotes(deployer, 100);
-    await QuadraticDiplomacyContract.voteMultiple(names, wallets, amounts);
+    await QuadraticVotingContract.giveVotes(TO_ADDRESS, 100);
+    await QuadraticVotingContract.giveVotes(deployer, 100);
+    await QuadraticVotingContract.voteMultiple(names, wallets, amounts);
   */
 
   /*
@@ -70,4 +70,4 @@ module.exports = async ({ getNamedAccounts, deployments }) => {
   });
   */
 };
-module.exports.tags = ["QuadraticDiplomacyContract"];
+module.exports.tags = ["QuadraticVotingContract"];

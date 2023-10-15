@@ -227,7 +227,7 @@ const VoterInput = ({ index, voters, setVoters, mainnetProvider }) => {
 const CandidateInput = ({ index, voters, setVoters, mainnetProvider }) => {
   return (
     <>
-      <Form.Item label={`Candidate ${index + 1}`} name={`address[${index}]`} style={{ marginBottom: "16px" }}>
+      <Form.Item label={`Category ${index + 1}`} name={`address[${index}]`} style={{ marginBottom: "16px" }}>
         <Row gutter={8} align="middle">
           <Col span={16}>
             <AddressInput

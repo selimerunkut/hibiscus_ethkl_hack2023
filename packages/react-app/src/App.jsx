@@ -191,8 +191,8 @@ function App() {
   useEffect(() => {
     const updateRoleAdmin = async () => {
       if (DEBUG) console.log("Updating admin role...");
-      if (readContracts && readContracts.QuadraticDiplomacyContract) {
-        const adminRoleFromContract = await readContracts.QuadraticDiplomacyContract.DEFAULT_ADMIN_ROLE();
+      if (readContracts && readContracts.QuadraticVotingContract) {
+        const adminRoleFromContract = await readContracts.QuadraticVotingContract.DEFAULT_ADMIN_ROLE();
         setAdminRole(adminRoleFromContract);
         if (DEBUG) console.log("Admin role updated!");
       }
@@ -203,8 +203,8 @@ function App() {
   useEffect(() => {
     const updateAdmin = async () => {
       if (DEBUG) console.log("Updating admin...");
-      if (readContracts && readContracts.QuadraticDiplomacyContract && adminRole) {
-        const isAdminFromContract = await readContracts.QuadraticDiplomacyContract.hasRole(adminRole, address);
+      if (readContracts && readContracts.QuadraticVotingContract && adminRole) {
+        const isAdminFromContract = await readContracts.QuadraticVotingContract.hasRole(adminRole, address);
         setIsAdmin(isAdminFromContract);
         if (DEBUG) console.log("Admin updated!");
       }
@@ -468,7 +468,7 @@ function App() {
           </Route>
           <Route exact path="/contract">
             <Contract
-              name="QuadraticDiplomacyContract"
+              name="QuadraticVotingContract"
               signer={userSigner}
               provider={localProvider}
               address={address}

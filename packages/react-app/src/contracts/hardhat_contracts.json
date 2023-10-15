@@ -4,7 +4,7 @@
       "name": "localhost",
       "chainId": "31337",
       "contracts": {
-        "QuadraticDiplomacyContract": {
+        "QuadraticVotingContract": {
           "address": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
           "abi": [
             {
@@ -550,7 +550,7 @@
       "name": "sepolia",
       "chainId": "11155111",
       "contracts": {
-        "QuadraticDiplomacyContract": {
+        "QuadraticVotingContract": {
           "address": "0x4AaF0509aC482E3e5f388c625B9FE7Dc8ebef2f9",
           "abi": [
             {

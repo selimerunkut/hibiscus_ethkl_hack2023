@@ -5,7 +5,7 @@ pragma solidity >=0.6.7 <0.9.0;
 import "@openzeppelin/contracts/math/SafeMath.sol";
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 
-contract Distributor {
+contract VoteDistributor {
     // utilize safemath for solidity <0.8.0
     using SafeMath for uint256;
 

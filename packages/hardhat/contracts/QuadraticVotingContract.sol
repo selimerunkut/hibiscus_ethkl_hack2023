@@ -3,9 +3,9 @@ pragma experimental ABIEncoderV2;
 //SPDX-License-Identifier: MIT
 import "@openzeppelin/contracts/access/AccessControl.sol";
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
-import "./Distributor.sol";
+import "./VoteDistributor.sol";
 
-contract QuadraticDiplomacyContract is Distributor, AccessControl {
+contract QuadraticVotingContract is VoteDistributor, AccessControl {
     event Vote(address votingAddress, address wallet, uint256 amount);
     event AddMember(address admin, address wallet);
     event NewElection(uint256 blockNumber);
