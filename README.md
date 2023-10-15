@@ -1,18 +1,21 @@
-# Quadratic diplomacy (distribution creation and votes off-chain, voters and candidates split list)
+# Quadratic Voting
 
-A semi-decentralized voting system for educational intitutions
+A semi-decentralized voting system for educational institutions
 
 Schools, Universities, etc.
 
 With one list for the voters and another list for the candidates.
 
-![qdip-create](https://user-images.githubusercontent.com/466652/139717035-12cfc65a-7234-40f7-a8c9-5722337201c0.png)
+![Preview](hibiscus_quadratic_voting.gif)
 
-![Preview](preview.png)
-
-![qdip-rewards](https://user-images.githubusercontent.com/466652/139717062-bf07094a-844b-40d4-a2bd-b21cbb48c6a5.png)
+## Deployed on Taiko 
+https://explorer.jolnir.taiko.xyz/address/0x8CaB06fE2A485A31Cc49795C5C7aC500c698f3e4
 
 This build uses a Firebase data store for storing members and votes. The distribution creation and the votes are verified using signed messages. Then the distribution is done on-chain based on the information from the off-chain distribution.
+
+## Special Thanks to
+
+Our code base
 
 Built with [🏗 Scaffold-ETH](https://github.com/austintgriffith/scaffold-eth) as a [Moonshot collective](https://moonshotcollective.space/) project.
 
