@@ -15,7 +15,7 @@ This build uses a Firebase data store for storing members and votes. The distrib
 
 ## Special Thanks to
 
-Our code base
+Code base: https://github.com/scaffold-eth/scaffold-eth/tree/qd-off-chain-voters-and-candidates
 
 Built with [🏗 Scaffold-ETH](https://github.com/austintgriffith/scaffold-eth) as a [Moonshot collective](https://moonshotcollective.space/) project.
 
