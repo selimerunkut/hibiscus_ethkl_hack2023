@@ -8,16 +8,13 @@ With one list for the voters and another list for the candidates.
 
 ![Preview](hibiscus_quadratic_voting.gif)
 
-## Deployed on Taiko 
+## Deployed on Taiko Testnet
 https://explorer.jolnir.taiko.xyz/address/0x8CaB06fE2A485A31Cc49795C5C7aC500c698f3e4
 
-This build uses a Firebase data store for storing members and votes. The distribution creation and the votes are verified using signed messages. Then the distribution is done on-chain based on the information from the off-chain distribution.
+## Deployed on Mantle Testnet
 
-## Special Thanks to
+https://explorer.testnet.mantle.xyz/address/0x8CaB06fE2A485A31Cc49795C5C7aC500c698f3e4
 
-Code base: https://github.com/scaffold-eth/scaffold-eth/tree/qd-off-chain-voters-and-candidates
-
-Built with [🏗 Scaffold-ETH](https://github.com/austintgriffith/scaffold-eth) as a [Moonshot collective](https://moonshotcollective.space/) project.
 
 ## 🏄‍♂️ Quick start
 
@@ -78,6 +75,17 @@ yarn backend
 
 📱 Open http://localhost:3000 to see the app
 
+### Semi-decentralized Budget Distribution
+
+This build uses a Firebase data store for storing members and votes. The budget distribution creation and the votes are verified using signed messages. Then the budget distribution is done on-chain based on the information from the off-chain budget distribution.
+
 ## 📚 Documentation
 
-Documentation, tutorials, challenges, and many more resources, visit: [docs.scaffoldeth.io](https://docs.scaffoldeth.io)
+ Documentation, tutorials, challenges, and many more resources, visit: [docs.scaffoldeth.io](https://docs.scaffoldeth.io)
+
+
+## Special Thanks to
+
+Code base: https://github.com/scaffold-eth/scaffold-eth/tree/qd-off-chain-voters-and-candidates
+
+Built with [🏗 Scaffold-ETH](https://github.com/austintgriffith/scaffold-eth) as a [Moonshot collective](https://moonshotcollective.space/) project.

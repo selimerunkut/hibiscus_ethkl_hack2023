@@ -175,7 +175,21 @@ module.exports = {
       accounts: [
         PRIVATE_KEY,
       ],
+    },
+    mantle: {
+      url: "https://rpc.mantle.xyz",
+      accounts: [
+        PRIVATE_KEY,
+      ],
+    },
+    mantle_testnet: {
+      url: " https://rpc.testnet.mantle.xyz",
+      accounts: [
+        PRIVATE_KEY,
+      ],
     }
+
+    	
   },
   solidity: {
     compilers: [
