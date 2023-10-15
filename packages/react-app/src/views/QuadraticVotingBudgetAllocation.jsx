@@ -149,7 +149,7 @@ export default function QuadraticVotingBudgetAllocation({
         ),
       },
       {
-        title: "Reward Amount",
+        title: "Budget Share",
         dataIndex: "rewardAmount",
         defaultSortOrder: "descend",
         align: "center",
@@ -353,7 +353,7 @@ export default function QuadraticVotingBudgetAllocation({
           type="number"
           disabled={!selectedToken} // disable if no token selected
           value={totalRewardAmount}
-          addonBefore="Total Amount to Distribute"
+          addonBefore="Budget to Distribute"
           addonAfter={
             <Select defaultValue="Select token..." onChange={setSelectedToken}>
               {TOKENS.map(tokenName => (
@@ -371,7 +371,7 @@ export default function QuadraticVotingBudgetAllocation({
           <Alert
             showIcon
             type="warning"
-            message={<Title level={5}>{missingVotingMembers.length} members has not voted yet.</Title>}
+            message={<Title level={5}>{missingVotingMembers.length} member(s) not voted yet.</Title>}
           />
         )}
         <Table
@@ -395,17 +395,17 @@ export default function QuadraticVotingBudgetAllocation({
                   disabled={rewardStatus === REWARD_STATUS.COMPLETED || !totalRewardAmount || !dataSource?.length}
                   size="large"
                 >
-                  Pay 💸
+                  Distribute 💸
                 </Button>
                 <Button
                   onClick={() => handlePayment(true)}
                   disabled={rewardStatus === REWARD_STATUS.COMPLETED || !totalRewardAmount || !dataSource?.length}
                   size="large"
                 >
-                  Pay and Close 💸🔒
+                  Distribute and Close 💸🔒
                 </Button>
                 <Button
-                  onClick={() => { if (confirm("Are you sure you want to close the distribution? You can't send payments after a distribution is closed.")) { handleFinishDistribution() }}}
+                  onClick={() => { if (confirm("Are you sure you want to close the distribution? You can't allocate budget after the distribution is closed.")) { handleFinishDistribution() }}}
                   size="large"
                 >
                   Just Close 🔒

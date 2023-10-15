@@ -1,0 +1,54 @@
+{
+  "1": {
+    "id": "1",
+    "owner": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+    "createdAt": 1697265245706,
+    "voteAllocation": "100",
+    "members": [
+      "0x70997970C51812dc3A010C7d01b50e0d17dc79C8"
+    ],
+    "candidates": [
+      "0x9bCff947E4CC5B351B954739EFE2531564B36393"
+    ],
+    "votes": {
+      "0x70997970C51812dc3A010C7d01b50e0d17dc79C8": {
+        "0x9bCff947E4CC5B351B954739EFE2531564B36393": 10
+      }
+    },
+    "votesSignatures": {
+      "0x70997970C51812dc3A010C7d01b50e0d17dc79C8": "0x75d1f29da2dc024b7aa1715e2eb56fa93959f857494e7080602a774b8ed4769501d90c77a9f840842ba459bc1b51144f8ec9c92ea529b6820bed8afaeb88a4a01b"
+    },
+    "signature": "0x4007cf8649a3dc4a07b67d486aef07791ee8c02e3f379e20f93a02e109313769064cfb66bf994528581d8b0a41b100f65965a72cc84ce52cd3b1f4dc0e36a5851c",
+    "status": "finished"
+  },
+  "2": {
+    "id": "2",
+    "owner": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+    "createdAt": 1697273211660,
+    "voteAllocation": "1000",
+    "members": [
+      "0x90F79bf6EB2c4f870365E785982E1f101E93b906",
+      "0x976EA74026E726554dB657fA54763abd0C3a0aa9",
+      "0x9965507D1a55bcC2695C58ba16FB37d819B0A4dc"
+    ],
+    "candidates": [
+      "Schooltrip",
+      "Sports Competition"
+    ],
+    "categories": [
+      "Schooltrip",
+      "Sports Competition"
+    ],
+    "votes": {
+      "0x90F79bf6EB2c4f870365E785982E1f101E93b906": {
+        "Schooltrip": 30,
+        "Sports Competition": 10
+      }
+    },
+    "votesSignatures": {
+      "0x90F79bf6EB2c4f870365E785982E1f101E93b906": "0x6e1c9b25137d467717651b36b7eecb55db7d18edf5033739ef67d65738adc4af7c6ed9fafdb7048a665e9b85a856d5f673b749eff1d3a6bfe5df8765db3a9f2e1b"
+    },
+    "signature": "0x4007cf8649a3dc4a07b67d486aef07791ee8c02e3f379e20f93a02e109313769064cfb66bf994528581d8b0a41b100f65965a72cc84ce52cd3b1f4dc0e36a5851c",
+    "status": "started"
+  }
+}

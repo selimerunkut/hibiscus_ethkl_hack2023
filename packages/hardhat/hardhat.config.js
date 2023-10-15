@@ -1,3 +1,4 @@
+
 const { utils } = require("ethers");
 const fs = require("fs");
 const chalk = require("chalk");
@@ -9,6 +10,8 @@ require("hardhat-deploy");
 
 require("@eth-optimism/hardhat-ovm");
 require("@nomiclabs/hardhat-ethers");
+require('dotenv').config({ path: __dirname + '/.env' })
+const PRIVATE_KEY = process.env.PRIVATE_KEY;
 
 const { isAddress, getAddress, formatUnits, parseUnits } = utils;
 
@@ -161,6 +164,18 @@ module.exports = {
         l2: "localOptimism",
       },
     },
+    taiko_jolnir: {
+      url: "https://rpc.jolnir.taiko.xyz",
+      accounts: [
+        PRIVATE_KEY,
+      ],
+    },
+    sepolia: {
+      url: "https://sepolia.infura.io/v3/"+process.env.INFURA_KEY,
+      accounts: [
+        PRIVATE_KEY,
+      ],
+    }
   },
   solidity: {
     compilers: [
